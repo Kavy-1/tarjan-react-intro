@@ -11,10 +11,26 @@ import ThingsToLearn from './ThingsToLearn';
 
 // REACT Component Incantation
 class App extends Component {
+
+  state = {
+    whatDayIsIt: 'Taco Day',
+    feeling: 'Happy'
+  }
+
+  myAwesomeSausomeFuntion(){
+    console.log( 'I have a state!', this.state );
+  }
+
   render() {
+    // Access state
+    console.log( 'App state is', this.state );
+    console.log( 'this is', this );
+
+    this.myAwesomeSausomeFuntion();
+
     return (
       <div>
-        <h1>Happy React Day!</h1>
+        <h1>{this.state.feeling} {this.state.whatDayIsIt}!</h1>
 
         <h3>Things to learn about React:</h3>
         <ThingsToLearn />
