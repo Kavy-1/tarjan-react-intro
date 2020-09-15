@@ -2,24 +2,29 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+// If this were node...
+// const PictureGallery = require( './PictureGallery' )
+
+// But on client-side we do
+import PictureGallery from './PictureGallery';
+
+// REACT Component Incantation
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <div>
+        <h1>Happy React Day!</h1>
+
+        <h3>Things to learn about React:</h3>
+        <ul>
+          <li>HTML inside of JS files</li>
+          <li>class APP extends Component ?!</li>
+          <li>render() ?</li>
+          <li>import / export</li>
+        </ul>
+
+        <h3>Check out my picture gallery:</h3>
+        <PictureGallery />
       </div>
     );
   }
